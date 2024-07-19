@@ -6,7 +6,7 @@ A Visual Studio Code extension that provides code autocompletion in the same way
 
 When writing in a file, Tabmania provides autocompletion. Pressing the **tab** key accepts the suggestion and inserts the text at the cursor location.
 
-\!\[feature screenshot\]\(https://github.com/aautcq/tabmania/blob/master/images/feature.png?raw=true\)
+![feature screenshot](https://tabmania.s3.eu-west-3.amazonaws.com/feature.png)
 
 ## Extension Settings
 
