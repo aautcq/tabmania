@@ -33,17 +33,6 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "languages": [
-      {
-        "id": "*",
-        "aliases": [
-          "All Languages"
-        ],
-        "extensions": [
-          "*"
-        ]
-      }
-    ],
     "configuration": {
       "title": "Tabmania",
       "properties": {
