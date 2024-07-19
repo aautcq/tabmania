@@ -33,12 +33,18 @@ export async function activate(context: vscode.ExtensionContext) {
 		if (!isInitialized) {
 			await initLlm(url, model);
 			isInitialized = true;
-			vscode.window.showInformationMessage('Tabmania initialized');
 		}
 		context.subscriptions.push(provider);
 	}
 	catch (error) {
-		vscode.window.showInformationMessage(`Tabmania ${error}`);
+		const selectedAction = await vscode.window.showErrorMessage(
+			`${error}`,
+			'Try again',
+			'Cancel'
+		);
+		if (selectedAction === 'Try again') {
+			activate(context);
+		}
 	}
 
 }

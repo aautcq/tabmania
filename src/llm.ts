@@ -36,6 +36,10 @@ export async function initLlm(url: string, model: string) {
 	}
 	const { models } = await response.json() as { models: OllamaModel[] };
 
+	if (models.length <= 0) {
+		throw new Error('No models found');
+	}
+
 	if (!models.some(({ name }) => name.split(':').slice(0, 1)[0] === model)) {
 		throw new Error(`Model ${model} not found`);
 	}
